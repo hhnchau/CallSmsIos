@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CallSmsIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kij-eS-37t">
+                                <rect key="frame" x="62.5" y="30" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oWT-r7-nLK">
+                                <rect key="frame" x="62" y="80" width="250" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="36T-Ym-Lrh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-Rz-feM">
+                                <rect key="frame" x="62" y="260" width="125" height="30"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fo-il-8lS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzz-q8-NAC">
+                                <rect key="frame" x="187" y="260" width="125" height="30"/>
+                                <state key="normal" title="Sms"/>
+                                <connections>
+                                    <action selector="btnSms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOT-k7-ANi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kij-eS-37t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4iw-Bs-b2h"/>
+                            <constraint firstItem="kij-eS-37t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5D6-Ea-MPb"/>
+                            <constraint firstItem="Lzz-q8-NAC" firstAttribute="height" secondItem="xsy-Rz-feM" secondAttribute="height" id="9fs-QI-afF"/>
+                            <constraint firstItem="kij-eS-37t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2/3" id="H4l-95-pFT"/>
+                            <constraint firstItem="oWT-r7-nLK" firstAttribute="leading" secondItem="kij-eS-37t" secondAttribute="leading" id="IjC-ub-e2W"/>
+                            <constraint firstItem="xsy-Rz-feM" firstAttribute="leading" secondItem="kij-eS-37t" secondAttribute="leading" id="Pgu-Fq-qOL"/>
+                            <constraint firstItem="Lzz-q8-NAC" firstAttribute="width" secondItem="xsy-Rz-feM" secondAttribute="width" id="RIq-oD-aKk"/>
+                            <constraint firstItem="oWT-r7-nLK" firstAttribute="width" secondItem="kij-eS-37t" secondAttribute="width" id="TsQ-LD-x8n"/>
+                            <constraint firstItem="xsy-Rz-feM" firstAttribute="width" secondItem="kij-eS-37t" secondAttribute="width" multiplier="1/2" id="bdZ-ts-ZNO"/>
+                            <constraint firstItem="oWT-r7-nLK" firstAttribute="top" secondItem="kij-eS-37t" secondAttribute="bottom" constant="20" id="kXb-SF-mBn"/>
+                            <constraint firstItem="xsy-Rz-feM" firstAttribute="top" secondItem="oWT-r7-nLK" secondAttribute="bottom" constant="30" id="mOd-kC-SGb"/>
+                            <constraint firstItem="Lzz-q8-NAC" firstAttribute="top" secondItem="xsy-Rz-feM" secondAttribute="top" id="ui0-ie-pVc"/>
+                            <constraint firstItem="Lzz-q8-NAC" firstAttribute="leading" secondItem="xsy-Rz-feM" secondAttribute="trailing" id="zcx-x0-hqS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="edtMessage" destination="oWT-r7-nLK" id="i7C-u5-s8k"/>
+                        <outlet property="edtPhone" destination="kij-eS-37t" id="jxK-Jv-u60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.5" y="116.5"/>
+        </scene>
+    </scenes>
+</document>
